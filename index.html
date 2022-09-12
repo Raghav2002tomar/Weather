@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Weather</h1>
+        <input id="value" placeholder="Search city"><br>
+        <button onclick="search()"> Search</button>
+        <div class="card" id="weather">
+            <!-- <div>
+                <h1>name</h1>
+                <div class="span"><span>145.c</span><span>154.c</span></div>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        let text = document.getElementById("value");
+        let weather = document.getElementById("weather");
+        const key = '18c9ce84016bf39727c21562ee799c1e';
+        let url;
+        function search() {
+            let searchQuery = text.value;
+            console.log(searchQuery);
+            url = `https://api.openweathermap.org/data/2.5/weather?q=${searchQuery}&appid=${key}`;
+            fetch(url).then((res) => {
+                res.json().then((data) => {
+                    console.log(data)
+                    let html = ` 
+                 <div>
+                       <h1>${data.name}</h1>
+                      <div class="span"><span>Min.temp: ${data.main.temp_min} K</span> /   <span>  Max.temp: ${data.main.temp_max} K</span></div>
+                        <span class="spantag">Wind  ${data.wind.speed} mph</>
+                </div>`
+                weather.innerHTML= html;
+                })
+            })
+        }
+
+
+    </script>
+</body>
+
+</html>
