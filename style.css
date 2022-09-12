@@ -1,0 +1,54 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdslCAbgVcZS59MRztfJ8nuHipFvPKUmBubA&usqp=CAU);
+}
+.main{
+  text-align: center;
+  padding-top: 25px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+ 
+}
+h1{
+  font-size: 40px;
+}
+#value{
+  margin-top: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  background-color: azure;
+ 
+  border: 0px;
+  border-radius: 7px;
+}
+button{
+  margin-top: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 6px;
+}
+button:hover{
+  background-color: rgb(20, 22, 22);
+  color: aliceblue;
+  transition: 0s;
+}
+.card{
+  margin-top: 20px;
+
+}
+.span{
+  font-size: 20px;
+  font-weight:bolder;
+  margin-top: 15px;
+  padding-bottom: 10px;
+  
+}
+.spantag{
+  font-size: 20px;
+  font-weight:bolder;
+  margin-top: 15px;
+}
